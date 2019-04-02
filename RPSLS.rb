@@ -25,34 +25,34 @@ until playerScore == 10 || compScore == 10
   puts "\n"
   puts "Select your weapon: Rock, paper, scissors, lizard, or Spock?"
 
-  player = gets.chomp.downcase
-  comp = ["rock", "paper", "scissors", "lizard", "Spock"].sample
+  player = gets.chomp.capitalize
+  comp = ["Rock", "Paper", "Scissors", "Lizard", "Spock"].sample
 
   # Player wins
 
-  if (player == "rock" && comp == "scissors") ||
-    (player == "rock" && comp == "lizard") ||
-    (player == "paper" && comp == "rock") ||
-    (player == "paper" && comp == "Spock") ||
-    (player == "scissors" && comp == "paper") ||
-    (player == "scissors" && comp == "lizard") ||
-    (player == "lizard" && comp == "paper") ||
-    (player == "lizard" && comp == "Spock") ||
-    (player == "Spock" && comp == "rock") ||
-    (player == "Spock" && comp == "scissors")
+  if (player == "Rock" && comp == "Scissors") ||
+    (player == "Rock" && comp == "Lizard") ||
+    (player == "Paper" && comp == "Rock") ||
+    (player == "Paper" && comp == "Spock") ||
+    (player == "Scissors" && comp == "Paper") ||
+    (player == "Scissors" && comp == "Lizard") ||
+    (player == "Lizard" && comp == "Paper") ||
+    (player == "Lizard" && comp == "Spock") ||
+    (player == "Spock" && comp == "Rock") ||
+    (player == "Spock" && comp == "Scissors")
     puts "\n"
     puts "You won!"
     puts "\n"
     playerScore += 1
-    puts ("#{player} beats #{comp}!").capitalize
+    puts ("#{player} beats #{comp}!")
     puts "Score: Player #{playerScore} | Comp #{compScore}"
 
   # Draws
 
-  elsif (player == "rock" && comp == "rock") ||
-    (player == "paper" && comp == "paper") ||
-    (player == "scissors" && comp == "scissors") ||
-    (player == "lizard" && comp == "lizard") ||
+elsif (player == "Rock" && comp == "Rock") ||
+    (player == "Paper" && comp == "Paper") ||
+    (player == "Scissors" && comp == "Scissors") ||
+    (player == "Lizard" && comp == "Lizard") ||
     (player == "Spock" && comp == "Spock")
     puts "\n"
     puts "Draw! No point awarded."
@@ -65,7 +65,7 @@ until playerScore == 10 || compScore == 10
     puts "\n"
     puts "You lost!"
     puts "\n"
-    puts ("#{comp} beats #{player}!").capitalize
+    puts ("#{comp} beats #{player}!")
     puts "Score: Player #{playerScore} | Comp #{compScore}"
   end
 
